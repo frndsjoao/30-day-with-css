@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  background-image: linear-gradient(45deg, #38f9d7 0%, #43e97b 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+ul {
+  position: absolute;
+  top: 45%;
+  margin-left: 2.5%;
+  width: 95%;
+  height: 50px;
+  background-color: #fefefe;
+  border-radius: 4px 1px 4px 1px;
+  box-shadow: 2px 2px .5em rgba(0,0,0,.5);
+  
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  align-items: center;
+  justify-content: center;
+}
+
+ul li {
+  list-style: none;
+  text-align: center;
+}
+
+ul li a {
+  text-decoration: none;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: .6px;
+  color: #333;
+}
+
+ul li a,
+nav.stroke ul li a:after,
+nav.shift ul li a:after,
+nav.stroke ul li a:before {
+  transition: all .5s;
+}
+
+nav.stroke ul li a {
+  position: relative;
+}
+
+nav.stroke ul li a:after,
+nav.stroke ul li a:before{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 21px;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #419844;
+  height: 1px;
+}
+
+nav li a:hover {
+  color: #419844;
+}
+
+nav.stroke ul li a:hover:after {
+  width: 100%
+}
+
+img {
+  width: 30px;
+  cursor: pointer;
+}
+#search {
+  width: 26px
+}
+
