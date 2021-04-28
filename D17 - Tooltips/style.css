@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(to top, #d5d4d0 0%, #d5d4d0 1%, #eeeeec 31%, #efeeec 75%, #e9e9e7 100%);
+  min-height: 100vh;
+}
+
+section {
+  min-height: 100vh;
+  padding: 0 15%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+section div {
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
+i {
+  color: #fafafa; 
+  font-size: 60px;
+  padding: 14px 18px;
+  border-radius: 6px;
+  box-shadow: 1px 1px .2em rgba(0,0,0,.5);
+  cursor: pointer;
+  transition: all .5s ease;
+}
+
+.tooltip {
+
+  width: 100%;
+  height: 30px;
+  padding-top: 3px;
+  text-align: center;
+  border-radius: 6px;
+  visibility: visible;
+  position: absolute;
+  top: -15px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s ease-in-out;
+}
+
+.tooltip::after {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: 40%;
+  width: 13px;
+  height: 13px;
+  border-radius: 2px;
+  align-items: center;
+  transform: rotate(45deg);  
+  opacity: 0;
+  visibility: hidden;
+  transition: all .2s ease-in-out;
+}
+
+.tooltip p {
+  font-family: 'Poppins', sans-serif;
+  color: #fafafa;
+  font-size: 14px;
+}
+
+.social:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+    transform: translateY(-35px);
+  transition: all .3s ease-in-out;
+}
+
+.social:hover .tooltip::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(20px) rotate(45deg);
+  transition: all .2s ease-in-out;
+}
+
+div:nth-child(1) > i,
+div:nth-child(1) > .tooltip,
+div:nth-child(1) > .tooltip::after {
+  background: #181717;
+}
+
+div:nth-child(2) > i,
+div:nth-child(2) > .tooltip,
+div:nth-child(2) > .tooltip::after {
+  background: #0A66C2;
+}
+
+div:nth-child(3) > i,
+div:nth-child(3) > .tooltip,
+div:nth-child(3) > .tooltip::after {
+  background: #1DA1F2;
+}
+
+div:nth-child(4) > i,
+div:nth-child(4) > .tooltip,
+div:nth-child(4) > .tooltip::after {
+  background: #E4405F;
+}
+
+div:nth-child(5) > i,
+div:nth-child(5) > .tooltip,
+div:nth-child(5) > .tooltip::after {
+  background: #000000;
+}

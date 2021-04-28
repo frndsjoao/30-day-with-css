@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  min-height: 100vh;
+}
+
+.typewriter {
+  position: relative;
+}
+
+.typewriter h1 {
+  font-family: 'Source Code Pro', monospace;
+  color: #fafafa;
+  font-weight: 400;
+  font-size: 48px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  overflow: hidden;
+  white-space: nowrap;
+  padding-left: 5px;
+  border-right: .15em solid #2156AA;
+  margin: 0 auto;
+  animation: typing 3s steps(34, end),
+    blinking 1s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blinking {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #2156AA;
+  }
+}
+
+
+
